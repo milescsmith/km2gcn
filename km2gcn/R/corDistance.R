@@ -7,6 +7,6 @@
 #' @export
 corDistance = function(a,b,signed=TRUE){
   if(signed)
-    return(0.5 * (1 + WGCNA::corFast(a,b, use = 'pairwise.complete.obs')))
-  return(abs(WGCNA::corFast(a,b, use = 'pairwise.complete.obs')))
+    return(0.5 * (1 + WGCNA::cor(x = a, y = b, use = 'pairwise.complete.obs')))
+  return(abs(WGCNA::cor(x = a, y = b, use = 'pairwise.complete.obs')))
 }
